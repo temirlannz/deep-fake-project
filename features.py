@@ -29,11 +29,14 @@ def crop_face(img_arr):
 def image_classifier(img_path):
     img_arr = cv2.imread(img_path)
     face = crop_face(img_arr)
+    print("Face shape:", face)
     if not isinstance(face, np.ndarray):
         return -1
     input = np.expand_dims(face,axis=0)
     pred = model.predict(input)
+    print("PREDUCTIONNNNNN", pred)
     res = np.argmax(pred)
+    print("weoinfowenofnwoenfoweinf", res)
     return int(res)
 
 def video_classifier(video_path):
