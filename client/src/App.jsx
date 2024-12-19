@@ -120,7 +120,7 @@ const App = () => {
 				<div className="text-2xl sm:text-4xl text-center absolute top-10 inset-x-0">Deepfake Detection</div>
 
 				{!videoUrl && !imageUrl ? <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-					<div className="size-52">
+					<div className="size-52 hidden">
 						<label ref={hoverRef} className="flex flex-col-reverse items-center justify-center gap-3 size-52 rounded-xl p-3 border-2 border-black/70 border-dashed cursor-pointer hover:scale-105 duration-150">
 							<div className="text-center text-3xl">Upload Video</div>
 							<div>
